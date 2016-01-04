@@ -48,6 +48,7 @@ public class PanDisp extends JPanel {
         /*keyPressed - when the key goes down
         keyReleased - when the key comes up
         keyTyped - when the unicode character represented by this key is sent by the keyboard to system input.*/
+        
         @Override
         public void keyTyped(KeyEvent e) {
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -70,13 +71,8 @@ public class PanDisp extends JPanel {
 
             char cWord;
             int nCorrect, nIncorrect, nNum;
-            //PanDisp panDisp = new PanDisp();
 
             public void actionPerformed(ActionEvent event) {
-                //for (int i = 0; i < sWord.length(); i++) {
-                //if (sInput.charAt(0) == sWord.charAt(i)) {
-                //lblOutput.setText("*******");
-                //}
                 if (sWord.contains(sInput)) {
                     for (int i = 0; i < sWord.length(); i++) {
                         sSecret.replace(sSecret.charAt(i), sWord.charAt(i));
@@ -85,28 +81,6 @@ public class PanDisp extends JPanel {
                         //}
                     }
                     nCorrect += 1;
-                    /*
-                    if(nNum == 0){
-                        lblOutput.setText(sSecret);
-                    }
-                    if(nNum == 1){
-                        lblOutput.setText("*i*****");
-                    }
-                    if(nNum == 2){
-                        lblOutput.setText("**k****");
-                    }
-                    if(nNum == 3){
-                        lblOutput.setText("***a***");
-                    }
-                    if(nNum == 4){
-                        lblOutput.setText("****c*");
-                    }
-                    if(nNum == 5){
-                        lblOutput.setText("*****h*");
-                    }
-                    if(nNum == 6){
-                        lblOutput.setText("******u");
-                    }*/
                 }
                 else {
                     nIncorrect += 1;
